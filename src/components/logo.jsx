@@ -4,7 +4,8 @@ import { useScroll } from "@react-three/drei";
 import { useEffect } from "react";
 
 export const Logo = ({ visible, scale = [1, 1, 1], onClick }) => {
-  const texture = useTexture("../models/kit.png");
+  // const texture = useTexture("../models/kit.png");
+  const texture = useTexture(import.meta.env.BASE_URL + "models/kit.png");
 
   const scrollData = useScroll();
 

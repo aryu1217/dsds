@@ -11,7 +11,11 @@ import { useExplode } from "../hooks/useExplode";
 import { Logo } from "./logo";
 
 export function Crow(props) {
-  const { nodes, materials } = useGLTF("/models/banana.glb");
+  // const { nodes, materials } = useGLTF("/models/banana.glb");
+  const { nodes, materials } = useGLTF(
+    import.meta.env.BASE_URL + "models/banana.glb"
+  );
+
   const group = useRef();
   useExplode(group, { distance: 50, enableRotation: true });
   return (
